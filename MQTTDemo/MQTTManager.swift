@@ -55,6 +55,7 @@ class MQTTManager: NSObject {
         }
     }
 
+    @discardableResult
     func publishMessage(topic: String, message: String) -> Bool {
 
         if mqtt?.connState == .connected {
@@ -110,7 +111,15 @@ extension MQTTManager: CocoaMQTTDelegate {
 
     func mqtt(_ mqtt: CocoaMQTT, didReceiveMessage message: CocoaMQTTMessage, id: UInt16 ) {
         TRACE("message: \(message.description), id: \(id)")
-        NotificationCenter.default.post(name: .MQTT.receiceMessage, object: nil, userInfo: ["msg": message.string ?? ""])
+
+        var userInfo: [String : Any] = [
+            "content": message.string ?? "",
+            "senderName": message.topic,
+            "timeStamp": Date().timeIntervalSince1970
+        ]
+        NotificationCenter.default.post(name: .MQTT.receiceMessage,
+                                        object: nil,
+                                        userInfo: userInfo)
 #if DEBUG
         if !(message.string?.contains("networkStats") ?? false) {
 

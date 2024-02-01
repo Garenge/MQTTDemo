@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		336A9A672B5E67D1004E564B /* NotificationDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336A9A662B5E67D1004E564B /* NotificationDefine.swift */; };
+		33E4D8752B6B6577007D93AC /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E4D8732B6B6577007D93AC /* MessageCell.swift */; };
+		33E4D8762B6B6577007D93AC /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33E4D8742B6B6577007D93AC /* MessageCell.xib */; };
 		9D988C3629F2773F00E4D74C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D988C3529F2773F00E4D74C /* AppDelegate.swift */; };
 		9D988C3829F2773F00E4D74C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D988C3729F2773F00E4D74C /* SceneDelegate.swift */; };
 		9D988C3A29F2773F00E4D74C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D988C3929F2773F00E4D74C /* ViewController.swift */; };
@@ -22,6 +24,8 @@
 /* Begin PBXFileReference section */
 		249D1BC18A564DD55704288F /* Pods-MQTTDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MQTTDemo.debug.xcconfig"; path = "Target Support Files/Pods-MQTTDemo/Pods-MQTTDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		336A9A662B5E67D1004E564B /* NotificationDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDefine.swift; sourceTree = "<group>"; };
+		33E4D8732B6B6577007D93AC /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		33E4D8742B6B6577007D93AC /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		4E4D5FA7A6BC1B504400FA62 /* Pods-MQTTDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MQTTDemo.release.xcconfig"; path = "Target Support Files/Pods-MQTTDemo/Pods-MQTTDemo.release.xcconfig"; sourceTree = "<group>"; };
 		8F30C1AFE2F8BE1CD9782966 /* Pods_MQTTDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MQTTDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D988C3229F2773F00E4D74C /* MQTTDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MQTTDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +94,8 @@
 				9D988C3E29F2774000E4D74C /* Assets.xcassets */,
 				9D988C4029F2774000E4D74C /* LaunchScreen.storyboard */,
 				9D988C4329F2774000E4D74C /* Info.plist */,
+				33E4D8732B6B6577007D93AC /* MessageCell.swift */,
+				33E4D8742B6B6577007D93AC /* MessageCell.xib */,
 			);
 			path = MQTTDemo;
 			sourceTree = "<group>";
@@ -163,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D988C4229F2774000E4D74C /* LaunchScreen.storyboard in Resources */,
+				33E4D8762B6B6577007D93AC /* MessageCell.xib in Resources */,
 				9D988C3F29F2774000E4D74C /* Assets.xcassets in Resources */,
 				9D988C3D29F2773F00E4D74C /* Main.storyboard in Resources */,
 			);
@@ -223,6 +230,7 @@
 				336A9A672B5E67D1004E564B /* NotificationDefine.swift in Sources */,
 				9D988C4E29F27A9800E4D74C /* MQTTResponse.swift in Sources */,
 				9D988C3829F2773F00E4D74C /* SceneDelegate.swift in Sources */,
+				33E4D8752B6B6577007D93AC /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

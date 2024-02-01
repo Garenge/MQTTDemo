@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "D2A9FDF4-B763-4E79-BBFC-799518250035"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CA8C7098-02BD-457A-B3E4-892E482A67C7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MQTTDemo/MQTTManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "mqtt(_:didReceiveMessage:id:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CA8C7098-02BD-457A-B3E4-892E482A67C7 - 452dad3fcf13f131"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MQTTDemo.MQTTManager.mqtt(_: CocoaMQTT.CocoaMQTT, didReceiveMessage: CocoaMQTT.CocoaMQTTMessage, id: Swift.UInt16) -&gt; ()"
+                  moduleName = "MQTTDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pengpeng/Downloads/Develop/iOS%E5%BC%80%E5%8F%91/MQTTDemo/MQTTDemo/MQTTManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "3252">
+               </Location>
+               <Location
+                  uuid = "CA8C7098-02BD-457A-B3E4-892E482A67C7 - 452dad3fcf13f131"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MQTTDemo.MQTTManager.mqtt(_: CocoaMQTT.CocoaMQTT, didReceiveMessage: CocoaMQTT.CocoaMQTTMessage, id: Swift.UInt16) -&gt; ()"
+                  moduleName = "MQTTDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pengpeng/Downloads/Develop/iOS%E5%BC%80%E5%8F%91/MQTTDemo/MQTTDemo/MQTTManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "3352">
+               </Location>
+               <Location
+                  uuid = "CA8C7098-02BD-457A-B3E4-892E482A67C7 - 452dad3fcf13f131"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MQTTDemo.MQTTManager.mqtt(_: CocoaMQTT.CocoaMQTT, didReceiveMessage: CocoaMQTT.CocoaMQTTMessage, id: Swift.UInt16) -&gt; ()"
+                  moduleName = "MQTTDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pengpeng/Downloads/Develop/iOS%E5%BC%80%E5%8F%91/MQTTDemo/MQTTDemo/MQTTManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "3356">
+               </Location>
+               <Location
+                  uuid = "CA8C7098-02BD-457A-B3E4-892E482A67C7 - 452dad3fcf13f131"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MQTTDemo.MQTTManager.mqtt(_: CocoaMQTT.CocoaMQTT, didReceiveMessage: CocoaMQTT.CocoaMQTTMessage, id: Swift.UInt16) -&gt; ()"
+                  moduleName = "MQTTDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pengpeng/Downloads/Develop/iOS%E5%BC%80%E5%8F%91/MQTTDemo/MQTTDemo/MQTTManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "3256">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
