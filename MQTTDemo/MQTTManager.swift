@@ -59,7 +59,8 @@ class MQTTManager: NSObject {
     func publishMessage(topic: String, message: String) -> Bool {
 
         if mqtt?.connState == .connected {
-            mqtt?.publish(topic, withString: message, qos: .qos2)
+            // retained 保留消息, 重新订阅的客户端会收到最后一条保留消息
+            mqtt?.publish(topic, withString: message, qos: .qos2, retained: true)
             return true
         } else {
             return false
