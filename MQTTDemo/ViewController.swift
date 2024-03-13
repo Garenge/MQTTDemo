@@ -87,7 +87,7 @@ extension ViewController {
               let senderName = senderName, senderName.count > 0 else {
             return
         }
-        MQTTManager.shared.publishMessage(topic: topic, message: message)
+        MQTTManager.shared.publishMessage(topic: topic, content: message, currentUser: senderName)
 
         let count = self.messages.count
         let messageModel = MessageModel(content: message, timeStamp: Date().timeIntervalSince1970, senderName: senderName)
@@ -127,6 +127,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell?.messageModel = self.messages[indexPath.row]
 
         return cell ?? UITableViewCell()
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 

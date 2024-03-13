@@ -14,6 +14,37 @@ public let MQTT_KEEPALIVE           = 45 as UInt16
 public let MQTT_TIMEOUT             = 30 as TimeInterval
 public let kUUID: String                             = UIDevice.current.identifierForVendor?.uuidString ?? ""
 
+struct MQTTContentModel: Codable {
+    var content: String?
+    var senderName: String?
+    var timeStamp = Date().timeIntervalSince1970
+
+    static func getJsonString(from model: MQTTContentModel) -> String {
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+        guard let data = try? encoder.encode(model) else {
+            return ""
+        }
+        return String(data: data, encoding: .utf8) ?? ""
+    }
+
+    static func getJsonDic(from jsonString: String) -> [String: Any]? {
+        guard jsonString.count > 0, let data = jsonString.data(using: .utf8) else {
+            return nil
+        }
+        let dic = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any]
+        return dic
+    }
+
+    static func getModel(from jsonString: String) -> MQTTContentModel? {
+        let decoder = JSONDecoder()
+        guard let data = jsonString.data(using: .utf8), let model = try? decoder.decode(MQTTContentModel.self, from: data) else {
+            return nil
+        }
+        return model
+    }
+}
+
 class MQTTManager: NSObject {
 
     static let shared = MQTTManager()
@@ -56,7 +87,15 @@ class MQTTManager: NSObject {
     }
 
     @discardableResult
-    func publishMessage(topic: String, message: String) -> Bool {
+    func publishMessage(topic: String, content: String, currentUser: String) -> Bool {
+
+        let contentModel = MQTTContentModel(content: content, senderName: currentUser)
+        let contentString = MQTTContentModel.getJsonString(from: contentModel)
+        return self.publishMessage(topic: topic, message: contentString)
+    }
+
+    @discardableResult
+    private func publishMessage(topic: String, message: String) -> Bool {
 
         if mqtt?.connState == .connected {
             // retained 保留消息, 重新订阅的客户端会收到最后一条保留消息
@@ -113,11 +152,13 @@ extension MQTTManager: CocoaMQTTDelegate {
     func mqtt(_ mqtt: CocoaMQTT, didReceiveMessage message: CocoaMQTTMessage, id: UInt16 ) {
         TRACE("message: \(message.description), id: \(id)")
 
-        var userInfo: [String : Any] = [
-            "content": message.string ?? "",
-            "senderName": message.topic,
-            "timeStamp": Date().timeIntervalSince1970
-        ]
+
+//        var userInfo: [String : Any] = [
+//            "content": message.string ?? "",
+//            "senderName": message.topic,
+//            "timeStamp": Date().timeIntervalSince1970
+//        ]
+        let userInfo = MQTTContentModel.getJsonDic(from: message.string ?? "")
         NotificationCenter.default.post(name: .MQTT.receiceMessage,
                                         object: nil,
                                         userInfo: userInfo)
